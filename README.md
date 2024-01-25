@@ -1,3 +1,1 @@
-# Proyecto plantilla
-
-¡Rellena este fichero!
+# Este equipo mola un huevo! 🙃
