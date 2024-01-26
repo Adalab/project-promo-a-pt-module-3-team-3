@@ -1,8 +1,24 @@
 import '../scss/App.scss'
 import logo from'../images/adalab.png'
 import laptop from '../images/laptop-code-solid.svg'
+import {useState} from 'react';
 
 function App() {
+
+//  Parte Vir
+
+  const [author, setAuthor] = useState();
+  const [job, setJob] = useState();
+
+  const handleClickAuthorName = (event) => {
+    setAuthor(event.currentTarget.value);
+  }
+  const handleClickJob = (event) => {
+    setJob(event.currentTarget.value);
+  }
+
+// Parte Vir
+
   return (
     <div className="container">
 
@@ -29,9 +45,9 @@ function App() {
           <div className="card__author">
             <div className="card__authorPhoto"></div>
             <p className="card__job">
-              Full stack Developer
+              {job || 'Fulltack Developer'}
             </p>
-            <h3 className="card__name">Emmelie Bjôrklund</h3>
+            <h3 className="card__name">{author || 'Emmelie Bjôrklund' }</h3>
           </div>
       
           <div className="card__project">            
@@ -69,14 +85,14 @@ function App() {
     
         <fieldset className="addForm__group">
           <legend className="addForm__title">Cuéntanos sobre la autora</legend>
-          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre"/>
-          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo"/>
+          <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre" onInput={handleClickAuthorName}/>
+          <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo" onInput={handleClickJob}/>
         </fieldset>
     
         <fieldset className="addForm__group--upload">
-          <label for="image" className="button">Subir foto del proyecto</label>
+          <label htmlFor="image" className="button" >Subir foto del proyecto</label>
           <input className="addForm__hidden" type="file" name="image" id="image"/>
-          <label for="photo" className="button">Subir foto de la autora</label>
+          <label htmlFor="photo" className="button">Subir foto de la autora</label>
           <input className="addForm__hidden" type="file" name="photo" id="photo"/>
           <button className="button--large">Guardar proyecto</button>
         </fieldset>
