@@ -9,6 +9,8 @@ import { useState } from "react";
 function App() {
   //  Parte Vir
 
+  //const projectData = [];
+
   const [author, setAuthor] = useState();
   const [job, setJob] = useState();
 
