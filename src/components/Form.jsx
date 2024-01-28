@@ -27,6 +27,7 @@ function Form(props) {
             name="repo"
             id="repo"
             placeholder="Repositorio"
+            onInput={props.handleInputGithubLink}
           />
           <input
             className="addForm__input"
@@ -34,6 +35,7 @@ function Form(props) {
             name="demo"
             id="demo"
             placeholder="Demo"
+            onInput={props.handleInputProjectLink}
           />
         </div>
         <input

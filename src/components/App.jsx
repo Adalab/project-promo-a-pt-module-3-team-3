@@ -29,6 +29,8 @@ function App() {
   const [slogan, setSlogan] = useState();
   const [description, setDescription] = useState();
   const [tecnologies, setTecnologies] = useState();
+  const [githubLink, setGithubLink] = useState();
+  const [projectLink, setProjectLink] = useState();
 
   const handleInputNameProject = (event) => {
     setNameProject(event.currentTarget.value);
@@ -41,6 +43,12 @@ function App() {
   };
   const handleInputTecnologies = (event) => {
     setTecnologies(event.currentTarget.value);
+  };
+  const handleInputGithubLink = (event) => {
+    setGithubLink(event.currentTarget.value);
+  };
+  const handleInputProjectLink = (event) => {
+    setProjectLink(event.currentTarget.value);
   };
 
   return (
@@ -56,6 +64,8 @@ function App() {
           slogan={slogan}
           description={description}
           tecnologies={tecnologies}
+          githubLink={githubLink}
+          projectLink={projectLink}
         />
 
         <form className="addForm">
@@ -66,6 +76,8 @@ function App() {
             handleInputSlogan={handleInputSlogan}
             handleInputDescription={handleInputDescription}
             handleInputTecnologies={handleInputTecnologies}
+            handleInputGithubLink={handleInputGithubLink}
+            handleInputProjectLink={handleInputProjectLink}
           />
         </form>
       </main>

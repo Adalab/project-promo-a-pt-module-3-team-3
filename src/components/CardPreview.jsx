@@ -34,21 +34,22 @@ function CardPreview(props) {
 
             <div className="card__technicalInfo">
               <p className="card__technologies">
-                {" "}
                 {props.tecnologies || "React JS - HTML - CSS"}
               </p>
 
               <a
                 className="icon icon__www"
-                href="#"
+                href={props.projectLink || "#"}
                 title="Haz click para ver el proyecto online"
+                target="_blank"
               >
                 Web link
               </a>
               <a
                 className="icon icon__github"
-                href="#"
+                href={props.githubLink || "#"}
                 title="Haz click para ver el código del proyecto"
+                target="_blank"
               >
                 GitHub link
               </a>
