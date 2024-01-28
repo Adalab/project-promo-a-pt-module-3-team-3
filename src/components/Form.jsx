@@ -1,10 +1,12 @@
+import Inputform from "./Inputform";
+
 function Form(props) {
   return (
     <>
       <h2 className="title">Información</h2>
       <fieldset className="addForm__group">
         <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-        <input
+        <Inputform
           className="addForm__input"
           type="text"
           name="name"
@@ -12,7 +14,7 @@ function Form(props) {
           placeholder="Nombre del proyecto"
           onInput={props.handleInputNameProject}
         />
-        <input
+        <Inputform
           className="addForm__input"
           type="text"
           name="slogan"
@@ -21,7 +23,7 @@ function Form(props) {
           onInput={props.handleInputSlogan}
         />
         <div className="addForm__2col">
-          <input
+          <Inputform
             className="addForm__input"
             type="url"
             name="repo"
@@ -29,7 +31,7 @@ function Form(props) {
             placeholder="Repositorio"
             onInput={props.handleInputGithubLink}
           />
-          <input
+          <Inputform
             className="addForm__input"
             type="url"
             name="demo"
@@ -38,7 +40,7 @@ function Form(props) {
             onInput={props.handleInputProjectLink}
           />
         </div>
-        <input
+        <Inputform
           className="addForm__input"
           type="text"
           name="technologies"
