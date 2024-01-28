@@ -23,18 +23,49 @@ function App() {
 
   // Parte Vir
 
+  // Parte Sara conectar formulario a tarjeta
+
+  const [nameProject, setNameProject] = useState();
+  const [slogan, setSlogan] = useState();
+  const [description, setDescription] = useState();
+  const [tecnologies, setTecnologies] = useState();
+
+  const handleInputNameProject = (event) => {
+    setNameProject(event.currentTarget.value);
+  };
+  const handleInputSlogan = (event) => {
+    setSlogan(event.currentTarget.value);
+  };
+  const handleInputDescription = (event) => {
+    setDescription(event.currentTarget.value);
+  };
+  const handleInputTecnologies = (event) => {
+    setTecnologies(event.currentTarget.value);
+  };
+
   return (
     <div className="container">
       <Header />
 
       <main className="main">
         <IndexSection />
-        <CardPreview job={job} author={author} />
+        <CardPreview
+          job={job}
+          author={author}
+          nameProject={nameProject}
+          slogan={slogan}
+          description={description}
+          tecnologies={tecnologies}
+        />
 
         <form className="addForm">
           <Form
             handleClickAuthorName={handleClickAuthorName}
             handleClickJob={handleClickJob}
+            handleInputNameProject={handleInputNameProject}
+            handleInputSlogan={handleInputSlogan}
+            handleInputDescription={handleInputDescription}
+            handleInputTecnologies={handleInputTecnologies}
           />
         </form>
       </main>
