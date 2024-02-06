@@ -1,6 +1,9 @@
 import Inputform from "./Inputform";
 
-function Form(props) {
+function Form({updateData}) {
+  const handleInput = (event) => {
+    updateData(event.currentTarget.name, event.currentTarget.value )
+  }
   return (
     <>
       <h2 className="title">Información</h2>
@@ -12,7 +15,7 @@ function Form(props) {
           name="name"
           id="name"
           placeholder="Nombre del proyecto"
-          onInput={props.handleInputNameProject}
+          onInput={handleInput}
         />
         <Inputform
           className="addForm__input"
@@ -20,7 +23,7 @@ function Form(props) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
-          onInput={props.handleInputSlogan}
+          onInput={handleInput}
         />
         <div className="addForm__2col">
           <Inputform
@@ -29,7 +32,7 @@ function Form(props) {
             name="repo"
             id="repo"
             placeholder="Repositorio"
-            onInput={props.handleInputGithubLink}
+            onInput={handleInput}
           />
           <Inputform
             className="addForm__input"
@@ -37,7 +40,7 @@ function Form(props) {
             name="demo"
             id="demo"
             placeholder="Demo"
-            onInput={props.handleInputProjectLink}
+            onInput={handleInput}
           />
         </div>
         <Inputform
@@ -46,7 +49,7 @@ function Form(props) {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
-          onInput={props.handleInputTecnologies}
+          onInput={handleInput}
         />
         <textarea
           className="addForm__input"
@@ -55,7 +58,7 @@ function Form(props) {
           id="desc"
           placeholder="Descripción"
           rows="5"
-          onInput={props.handleInputDescription}
+          onInput={handleInput}
         ></textarea>
       </fieldset>
 
@@ -67,7 +70,7 @@ function Form(props) {
           name="autor"
           id="autor"
           placeholder="Nombre"
-          onInput={props.handleClickAuthorName}
+          onInput={handleInput}
         />
         <input
           className="addForm__input"
@@ -75,7 +78,7 @@ function Form(props) {
           name="job"
           id="job"
           placeholder="Trabajo"
-          onInput={props.handleClickJob}
+          onInput={handleInput}
         />
       </fieldset>
 
