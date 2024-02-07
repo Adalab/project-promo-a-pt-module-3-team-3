@@ -17,12 +17,14 @@ function CardPreview({ data }) {
           </div>
 
           <div className="card__project">
-            <h3 className="card__name">{data.name || "Elegant Workspace"}</h3>
+            <h3 className="card__name">
+              <strong>{data.name || "Elegant Workspace"}</strong>
+            </h3>
             <p className="card__slogan">
               {data.slogan || "Diseños Exclusivos"}
             </p>
             <h3 className="card__descriptionTitle">
-              Descripción del proyecto:
+              <strong>Descripción del proyecto:</strong>
             </h3>
             <p className="card__description">
               {data.desc ||
