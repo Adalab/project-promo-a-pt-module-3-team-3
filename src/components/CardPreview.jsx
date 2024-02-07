@@ -1,4 +1,4 @@
-function CardPreview(props) {
+function CardPreview({data}) {
   return (
     <>
       <section className="preview">
@@ -12,34 +12,34 @@ function CardPreview(props) {
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
-            <p className="card__job">{props.job || "Fulltack Developer"}</p>
+            <p className="card__job">{data.job || "Fulltack Developer"}</p>
             <h3 className="card__name">
-              {props.author || "Emmelie Bjôrklund"}
+              {data.author || "Emmelie Bjôrklund"}
             </h3>
           </div>
 
           <div className="card__project">
             <h3 className="card__name">
-              {props.nameProject || "Elegant Workspace"}
+              {data.name || "Elegant Workspace"}
             </h3>
             <p className="card__slogan">
-              {props.slogan || "Diseños Exclusivos"}
+              {data.slogan || "Diseños Exclusivos"}
             </p>
-            <h3 className="card__descriptionTitle">Product description</h3>
+            <h3 className="card__descriptionTitle">Descripción del proyecto:</h3>
             <p className="card__description">
-              {props.description ||
+              {data.desc ||
                 `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
               quos? Itaque, molestias eveniet laudantium adipisci vitae ratione`}
             </p>
 
             <div className="card__technicalInfo">
               <p className="card__technologies">
-                {props.tecnologies || "React JS - HTML - CSS"}
+                {data.technologies || "React JS - HTML - CSS"}
               </p>
 
               <a
                 className="icon icon__www"
-                href={props.projectLink || "#"}
+                href={data.demo || "#"}
                 title="Haz click para ver el proyecto online"
                 target="_blank"
               >
@@ -47,7 +47,7 @@ function CardPreview(props) {
               </a>
               <a
                 className="icon icon__github"
-                href={props.githubLink || "#"}
+                href={data.repo || "#"}
                 title="Haz click para ver el código del proyecto"
                 target="_blank"
               >
