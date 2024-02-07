@@ -12,7 +12,7 @@ function CardPreview({ data }) {
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
-            <p className="card__job">{data.job || "Fulltack Developer"}</p>
+            <p className="card__job">{data.job || "FullStack Developer"}</p>
             <h3 className="card__name">{data.author || "Emmelie Bjôrklund"}</h3>
           </div>
 
