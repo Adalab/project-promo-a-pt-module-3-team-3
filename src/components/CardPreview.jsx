@@ -1,4 +1,4 @@
-function CardPreview({data}) {
+function CardPreview({ data }) {
   return (
     <>
       <section className="preview">
@@ -6,26 +6,24 @@ function CardPreview({data}) {
         <article className="card">
           <h2 className="card__projectTitle">
             <span className="card__projectTitle--text">
-              Personal project card
+              Tarjeta Del Proyecto
             </span>
           </h2>
 
           <div className="card__author">
             <div className="card__authorPhoto"></div>
             <p className="card__job">{data.job || "Fulltack Developer"}</p>
-            <h3 className="card__name">
-              {data.author || "Emmelie Bjôrklund"}
-            </h3>
+            <h3 className="card__name">{data.author || "Emmelie Bjôrklund"}</h3>
           </div>
 
           <div className="card__project">
-            <h3 className="card__name">
-              {data.name || "Elegant Workspace"}
-            </h3>
+            <h3 className="card__name">{data.name || "Elegant Workspace"}</h3>
             <p className="card__slogan">
               {data.slogan || "Diseños Exclusivos"}
             </p>
-            <h3 className="card__descriptionTitle">Descripción del proyecto:</h3>
+            <h3 className="card__descriptionTitle">
+              Descripción del proyecto:
+            </h3>
             <p className="card__description">
               {data.desc ||
                 `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
