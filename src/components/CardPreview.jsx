@@ -6,7 +6,7 @@ function CardPreview({data}) {
         <article className="card">
           <h2 className="card__projectTitle">
             <span className="card__projectTitle--text">
-              Personal project card
+              Tarjeta Del Proyecto
             </span>
           </h2>
 
