@@ -1,6 +1,7 @@
+import GetAvatar from "./GetAvatar";
 import Inputform from "./Inputform";
 
-function Form({updateData}) {
+function Form({updateData, updateAvatar}) {
   const handleInput = (event) => {
     updateData(event.currentTarget.name, event.currentTarget.value )
   }
@@ -83,24 +84,8 @@ function Form({updateData}) {
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <label htmlFor="image" className="button">
-          Subir foto del proyecto
-        </label>
-        <input
-          className="addForm__hidden"
-          type="file"
-          name="image"
-          id="image"
-        />
-        <label htmlFor="photo" className="button">
-          Subir foto de la autora
-        </label>
-        <input
-          className="addForm__hidden"
-          type="file"
-          name="photo"
-          id="photo"
-        />
+        <GetAvatar text="Subir foto del proyecto" updateAvatar={updateAvatar} fieldName={'image'}/>
+        <GetAvatar text="Subir foto de la autora" updateAvatar={updateAvatar} fieldName={'photo'}/>
         <button className="button--large">Guardar proyecto</button>
       </fieldset>
     </>

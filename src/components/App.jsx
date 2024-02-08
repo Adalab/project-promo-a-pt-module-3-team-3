@@ -26,6 +26,13 @@ function App() {
   }
 // Falta cambiarlo en el cardPreview para que se cambie en la tarjeta////
   
+  const updateAvatar = (fieldName, image) => {
+    setData({...data,[ fieldName]: image})
+
+  }
+  
+
+
   return (
     <div className="container">
       <Header />
@@ -37,6 +44,7 @@ function App() {
         <form className="addForm">
           <Form
             updateData={updateData}
+            updateAvatar={updateAvatar}
           />
         </form>
       </main>
