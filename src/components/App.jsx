@@ -24,7 +24,7 @@ function App() {
   const updateData = (fieldName, userValue) => {
     setData({...data,[ fieldName]: userValue})
   }
-
+// Falta cambiarlo en el cardPreview para que se cambie en la tarjeta////
   
   return (
     <div className="container">
