@@ -19,6 +19,7 @@ function App() {
     author: "",
     job: "",
     image: "",
+    photo: "",
   });
 
   const updateData = (fieldName, userValue) => {
