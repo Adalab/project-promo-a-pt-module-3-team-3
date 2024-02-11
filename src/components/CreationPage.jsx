@@ -4,7 +4,7 @@ import CardPreview from "./CardPreview.jsx";
 import Footer from "./Footer.jsx";
 import Form from "./Form.jsx";
 
-function CreationPage() {
+function CreationPage({ data, updateData, updateAvatar }) {
   return (
     <div className="container">
       <Header />

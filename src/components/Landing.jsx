@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Landing() {
   return (
     <div className="hero__landing">
@@ -8,9 +10,9 @@ function Landing() {
         </p>
         <div className="buttons__landing">
           <div className="content__button">
-            <a className="button__a" href="#">
+            <Link to="/create" className="button__a">
               ¡Comparte tu proyecto!
-            </a>
+            </Link>
           </div>
           <div className="content__button">
             <a className="button__a" href="#">
