@@ -364,3 +364,78 @@
     background-image: url('../images/icons/github.svg');
   }
 }
+
+/* LANDING */
+
+.hero__landing{
+  background-image: url('../images/mountain.png') ; 
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero__content{
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__title{
+font-family: 'Lilita One', sans-serif;
+text-align: center;
+font-size: 4rem;
+font-weight: bold;
+color: #ec9223;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.31;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.content__slogan{
+  font-family: 'Lilita One', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.content__button{
+
+background-color:#ec9223;
+padding: 7px 20px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+margin-top: 25px;
+margin-right: 25px;
+}
+
+.content__button:hover{
+background-color:#25c93b;
+}
+
+.button__a{
+text-decoration: none;
+color: white;
+font-size: 1.5rem;
+font-weight:500;
+font-family: 'Lilita One', sans-serif;
+}
+
+.buttons__landing{
+  display: flex;
+}
