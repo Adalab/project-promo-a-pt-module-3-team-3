@@ -118,7 +118,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
   );
 }
 
-Create.propTypes = {
+Form.propTypes = {
   updateAvatar: PropTypes.func.isRequired,
   updateData: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
