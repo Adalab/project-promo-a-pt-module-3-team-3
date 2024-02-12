@@ -1,5 +1,6 @@
 import GetAvatar from "./GetAvatar";
 import Inputform from "./Inputform";
+import { PropTypes } from "prop-types";
 
 function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
   const handleInput = (event) => {
@@ -116,5 +117,12 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
     </>
   );
 }
+
+Create.propTypes = {
+  updateAvatar: PropTypes.func.isRequired,
+  updateData: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  responseFetch: PropTypes.array,
+};
 
 export default Form;

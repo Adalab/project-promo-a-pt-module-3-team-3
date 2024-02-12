@@ -32,6 +32,9 @@ Create.propTypes = {
   data: PropTypes.array,
   updateAvatar: PropTypes.func.isRequired,
   updateData: PropTypes.func.isRequired,
+  setDataResponse: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  dataResponse: PropTypes.array,
 };
 
 export default Create;
