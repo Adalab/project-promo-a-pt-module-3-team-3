@@ -1,10 +1,16 @@
 import GetAvatar from "./GetAvatar";
 import Inputform from "./Inputform";
 
-function Form({updateData, updateAvatar}) {
+function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
   const handleInput = (event) => {
-    updateData(event.currentTarget.name, event.currentTarget.value )
-  }
+    updateData(event.currentTarget.name, event.currentTarget.value);
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    onSubmit();
+  };
+
   return (
     <>
       <h2 className="title">Información</h2>
@@ -84,9 +90,28 @@ function Form({updateData, updateAvatar}) {
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <GetAvatar text="Subir foto del proyecto" updateAvatar={updateAvatar} fieldName={'image'}/>
-        <GetAvatar text="Subir foto de la autora" updateAvatar={updateAvatar} fieldName={'photo'}/>
-        <button className="button--large">Guardar proyecto</button>
+        <GetAvatar
+          text="Subir foto del proyecto"
+          updateAvatar={updateAvatar}
+          fieldName={"image"}
+        />
+        <GetAvatar
+          text="Subir foto de la autora"
+          updateAvatar={updateAvatar}
+          fieldName={"photo"}
+        />
+        <button className="button--large" onClick={handleClick}>
+          Guardar proyecto
+        </button>
+        {responseFetch !== "" && responseFetch.success && (
+          <p>
+            Tu proyecto ha sido creado en la siguiente dirección:
+            <a href={responseFetch.cardURL}>{responseFetch.cardURL}</a>
+          </p>
+        )}
+        {responseFetch !== "" && !responseFetch.success && (
+          <p> Ha ocurrido un error: {responseFetch.error}</p>
+        )}
       </fieldset>
     </>
   );

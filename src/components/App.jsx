@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Landing from "./Landing.jsx";
 import Create from "./Create.jsx";
+import handleFetchCreate from "./services/onSubmit.js";
 
 function App() {
   const [data, setData] = useState({
@@ -20,13 +21,23 @@ function App() {
     photo: "",
   });
 
+  const [dataResponse, setDataResponse] = useState("");
+
   const updateData = (fieldName, userValue) => {
     setData({ ...data, [fieldName]: userValue });
   };
-  // Falta cambiarlo en el cardPreview para que se cambie en la tarjeta////
 
   const updateAvatar = (fieldName, image) => {
     setData({ ...data, [fieldName]: image });
+  };
+
+  const createProject = () => {
+    data.autor = data.author;
+    delete data.author;
+    handleFetchCreate(data).then((dataResponse) => {
+      console.log(dataResponse);
+      setDataResponse(dataResponse);
+    });
   };
 
   return (
@@ -43,6 +54,9 @@ function App() {
                 data={data}
                 updateAvatar={updateAvatar}
                 updateData={updateData}
+                onSubmit={createProject}
+                setDataResponse={setDataResponse}
+                dataResponse={dataResponse}
               />
             }
           ></Route>
