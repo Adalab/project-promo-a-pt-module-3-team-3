@@ -1,12 +1,10 @@
 import "../scss/App.scss";
 import Header from "./Header.jsx";
-import IndexSection from "./IndexSection.jsx";
-import CardPreview from "./CardPreview.jsx";
 import Footer from "./Footer.jsx";
-import Form from "./Form.jsx";
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Landing from "./Landing.jsx";
+import Create from "./Create.jsx";
 
 function App() {
   const [data, setData] = useState({
@@ -37,14 +35,18 @@ function App() {
 
       <main className="main">
         <Routes>
-          <Route path="/" element={<Landing/>}></Route>
+          <Route path="/" element={<Landing />}></Route>
+          <Route
+            path="/create/"
+            element={
+              <Create
+                data={data}
+                updateAvatar={updateAvatar}
+                updateData={updateData}
+              />
+            }
+          ></Route>
         </Routes>
-        <IndexSection />
-        <CardPreview data={data} />
-
-        <form className="addForm">
-          <Form updateData={updateData} updateAvatar={updateAvatar} />
-        </form>
       </main>
       <Footer />
     </div>
