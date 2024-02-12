@@ -5,7 +5,8 @@ import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Landing from "./Landing.jsx";
 import Create from "./Create.jsx";
-import handleFetchCreate from "./services/onSubmit.js";
+import handleFetchCreate from "../services/onSubmit.js";
+import {get, set} from "../services/localStorage.js"
 
 function App() {
   const [data, setData] = useState({
