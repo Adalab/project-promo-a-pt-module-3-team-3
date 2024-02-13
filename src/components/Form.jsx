@@ -5,6 +5,7 @@ import { PropTypes } from "prop-types";
 function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
   const handleInput = (event) => {
     updateData(event.currentTarget.name, event.currentTarget.value);
+    
   };
 
   const handleClick = (event) => {

@@ -25,6 +25,7 @@ function App() {
   const [dataResponse, setDataResponse] = useState("");
 
   const [name, setName] = useState(get("data", {}).name || "");
+
   //crear una variable de estado para cada una de las propiedades del objeto data.
 
   //EXPLICACIÓN DE LO QUE PONE DENTRO DE USESTATE ():
@@ -34,13 +35,33 @@ function App() {
   // Si todo esto existe, lo ponemos como valor inicial de la variable name.
   // Con || " "  ------------ Indicamos que si no existe, ponemos un string vacío.
 
+  const [slogan, setSlogan] = useState(get("data", {}).slogan || "");
+  const [technologies, setTechnologies] = useState(get("data", {}).technologies || "");
+  const [repo, setRepo] = useState(get("data", {}).repo || "");
+  const [demo, setDemo] = useState(get("data", {}).demo || "");
+  const [desc, setDesc] = useState(get("data", {}).desc || "");
+  const [author, setAuthor] = useState(get("data", {}).author || "");
+  const [job, setJob] = useState(get("data", {}).job || "");
+  const [image, setImage] = useState(get("data", {}).image || "");
+  const [photo, setPhoto] = useState(get("data", {}).photo || "");
+
   useEffect(() => {
     // Guardamos en el local storage el objeto data con las propiedades que necesitamos.
     set("data", {
       name: name,
-      //faltan añadir todas
+      slogan: slogan,
+      technologies: technologies,
+      repo: repo,
+      demo: demo,
+      desc: desc,
+      author: author,
+      job: job,
+      image: image,
+      photo: photo
     });
-  }, [name]); //añadimos todas las constantes para que se realice el set siempre que varíen.
+  }, [name, slogan, technologies, repo, demo, desc, author, job, image, photo]); 
+  
+  //añadimos todas las constantes para que se realice el set siempre que varíen.
 
 
 
