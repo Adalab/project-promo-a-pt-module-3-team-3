@@ -122,7 +122,7 @@ Form.propTypes = {
   updateAvatar: PropTypes.func.isRequired,
   updateData: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  responseFetch: PropTypes.array,
+  responseFetch: PropTypes.string,
 };
 
 export default Form;
