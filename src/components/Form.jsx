@@ -2,10 +2,9 @@ import GetAvatar from "./GetAvatar";
 import Inputform from "./Inputform";
 import { PropTypes } from "prop-types";
 
-function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
+function Form({ data, updateData, updateAvatar, onSubmit, responseFetch }) {
   const handleInput = (event) => {
     updateData(event.currentTarget.name, event.currentTarget.value);
-    
   };
 
   const handleClick = (event) => {
@@ -23,6 +22,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="name"
           id="name"
+          value={data.name}
           placeholder="Nombre del proyecto"
           onInput={handleInput}
         />
@@ -31,6 +31,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="slogan"
           id="slogan"
+          value={data.slogan}
           placeholder="Slogan"
           onInput={handleInput}
         />
@@ -40,6 +41,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
             type="url"
             name="repo"
             id="repo"
+            value={data.repo}
             placeholder="Repositorio"
             onInput={handleInput}
           />
@@ -48,6 +50,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
             type="url"
             name="demo"
             id="demo"
+            value={data.demo}
             placeholder="Demo"
             onInput={handleInput}
           />
@@ -57,6 +60,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="technologies"
           id="technologies"
+          value={data.technologies}
           placeholder="Tecnologías"
           onInput={handleInput}
         />
@@ -65,6 +69,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="desc"
           id="desc"
+          value={data.desc}
           placeholder="Descripción"
           rows="5"
           onInput={handleInput}
@@ -78,6 +83,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="author"
           id="author"
+          value={data.author}
           placeholder="Nombre"
           onInput={handleInput}
         />
@@ -86,6 +92,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
           type="text"
           name="job"
           id="job"
+          value={data.job}
           placeholder="Trabajo"
           onInput={handleInput}
         />
@@ -120,6 +127,7 @@ function Form({ updateData, updateAvatar, onSubmit, responseFetch }) {
 }
 
 Form.propTypes = {
+  data: PropTypes.object.isRequired,
   updateAvatar: PropTypes.func.isRequired,
   updateData: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,

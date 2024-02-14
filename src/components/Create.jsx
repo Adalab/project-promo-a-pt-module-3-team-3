@@ -22,6 +22,7 @@ function Create({
           setDataResponse={setDataResponse}
           responseFetch={dataResponse}
           onSubmit={onSubmit}
+          data={data}
         />
       </form>
     </>
