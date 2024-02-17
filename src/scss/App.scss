@@ -364,3 +364,77 @@
     background-image: url('../images/icons/github.svg');
   }
 }
+
+
+//LANDING
+
+.hero__landing{
+  background-image: url('../images/mountain1.png') ; 
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero__content{
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.content__logo{
+  width: 250px; 
+  border-radius: 50%; 
+}
+
+.content__slogan{
+  font-family: 'Lilita One', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003c25;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.31;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.content__button{
+
+background-color:#cc7a16;
+padding: 7px 20px;
+border-radius: 8px;
+border: none;
+cursor: pointer;
+margin-top: 25px;
+margin-right: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.content__button:hover{
+background-color:#70ba2f;
+}
+
+.button__a{
+text-decoration: none;
+color: white;
+font-size: 1.2rem;
+font-weight:500;
+font-family: 'Lilita One', sans-serif;
+text-align: center;
+}
+
+.buttons__landing{
+  display: flex;
+}

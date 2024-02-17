@@ -1,13 +1,14 @@
-import projectDefault from '../images/ebook-example.jpg'
-import authorDefault from '../images/avatar.webp'
-
+import projectDefault from "../images/IMGreyes.jpg";
+import authorDefault from "../images/lioness.jpg";
 
 function CardPreview({ data }) {
   return (
     <>
       <section className="preview">
-        <div className="projectImage" 
-        style={{backgroundImage: `url('${data.image || projectDefault}')`}}/>
+        <div
+          className="projectImage"
+          style={{ backgroundImage: `url('${data.image || projectDefault}')` }}
+        />
         <article className="card">
           <h2 className="card__projectTitle">
             <span className="card__projectTitle--text">
@@ -16,18 +17,21 @@ function CardPreview({ data }) {
           </h2>
 
           <div className="card__author">
-            <div className="card__authorPhoto"  style={{backgroundImage: `url('${data.photo || authorDefault}')`}}></div>
+            <div
+              className="card__authorPhoto"
+              style={{
+                backgroundImage: `url('${data.photo || authorDefault}')`,
+              }}
+            ></div>
             <p className="card__job">{data.job || "FullStack Developer"}</p>
             <h3 className="card__name">{data.author || "Emmelie Bjôrklund"}</h3>
           </div>
 
           <div className="card__project">
             <h3 className="card__name">
-              <strong>{data.name || "Elegant Workspace"}</strong>
+              <strong>{data.name || "Wild Workspace"}</strong>
             </h3>
-            <p className="card__slogan">
-              {data.slogan || "Diseños Exclusivos"}
-            </p>
+            <p className="card__slogan">{data.slogan || "Diseños salvajes"}</p>
             <h3 className="card__descriptionTitle">
               <strong>Descripción del proyecto:</strong>
             </h3>

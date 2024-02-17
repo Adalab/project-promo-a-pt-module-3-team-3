@@ -1,4 +1,4 @@
-import logo from "../images/adalab.png";
+import logo from "../images/logo2.png";
 
 function Footer() {
   return (
