@@ -7,6 +7,7 @@ function Inputform(props) {
       id={props.id}
       placeholder={props.placeholder}
       onInput={props.onInput}
+      value={props.value}
     />
   );
 }
