@@ -1,5 +1,5 @@
-import laptop from "../images/laptop-code-solid.svg";
-import logo from "../images/logo2.png";
+import laptop from "../images/montañitas1.png";
+import logo from "../images/logo2.0.png";
 
 function Header() {
   return (

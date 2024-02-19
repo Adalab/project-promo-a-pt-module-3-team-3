@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import NaturaTechLogo from "../images/logo1.png"; // Ruta de la imagen
+import NaturaTechLogo from "../images/Logo.png"; // Ruta de la imagen
 
 function Landing() {
   return (
