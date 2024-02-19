@@ -1,5 +1,5 @@
-import laptop from "../images/laptop-code-solid.svg";
-import logo from "../images/adalab.png";
+import laptop from "../images/montañitas1.png";
+import logo from "../images/logo2.0.png";
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
             src={laptop}
             alt="Logo proyectos molones"
           />
-          <h1 className="header__title">Proyectos molones</h1>
+          <h1 className="header__title"></h1>
         </a>
         <img className="logoSponsor" src={logo} alt="Logo Adalab" />
       </header>

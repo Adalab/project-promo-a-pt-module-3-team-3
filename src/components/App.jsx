@@ -48,29 +48,31 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header />
-
-      <main className="main">
-        <Routes>
-          <Route path="/" element={<Landing />}></Route>
-          <Route
-            path="/create/"
-            element={
-              <Create
-                data={data}
-                updateAvatar={updateAvatar}
-                updateData={updateData}
-                onSubmit={createProject}
-                setDataResponse={setDataResponse}
-                dataResponse={dataResponse}
-              />
-            }
-          ></Route>
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Landing />}></Route>
+      <Route
+        path="/create"
+        element={
+          <>
+            {" "}
+            <div className="container">
+              <Header />
+              <main className="main">
+                <Create
+                  data={data}
+                  updateAvatar={updateAvatar}
+                  updateData={updateData}
+                  onSubmit={createProject}
+                  setDataResponse={setDataResponse}
+                  dataResponse={dataResponse}
+                />
+              </main>
+              <Footer />{" "}
+            </div>
+          </>
+        }
+      ></Route>
+    </Routes>
   );
 }
 
